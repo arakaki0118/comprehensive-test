@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.section1 {
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+}
+
+.section1-left {
+  width: 30%;
+  background-color: #573F2E;
+}
+
+.section1-right {
+  width: 70%;
+  background-color: #3E2D21;
+}
+
+.section2 {
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+}
+
+.section2-left {
+  width: 30%;
+  background-color: #FAEDED;
+}
+
+.section2-right {
+  width: 70%;
+}
+
+.section2-right-top {
+  height: 70%;
+  background-color: #6A4021;
+}
+
+.section2-right-second {
+  height: 30%;
+  background-color: #3E2D21;
+}

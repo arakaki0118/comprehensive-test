@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>住所検索</title>
+</head>
+<body>
+    <h1>郵便番号</h1>
+    <!-- 郵便番号入力の検索ボックス -->
+    <input type="text" id="zipcode" value="" maxlength="7" required>
+    <input type="button" id="serch_btn" value="検索">
+    <input type="button" id="clear_btn" value="クリア">
+    <p>※7桁の半角数字で入力してください(全角/半角そちらでも可)</p>
+
+    <!-- 検索結果の表示エリア -->
+    <div id="zip_result">
+        
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
