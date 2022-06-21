@@ -1,0 +1,355 @@
+body {
+  background-color:white;
+}
+
+.top-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  margin-right: 182px;
+}
+
+.fancy {
+  background-color: transparent;
+  border: 2px solid #000;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-left: 2rem;
+  outline: none;
+  overflow: visible;
+  padding: 1.25em 2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-size: 13px;
+}
+
+.fancy::before {
+  content: " ";
+  width: 1.5625rem;
+  height: 2px;
+  background: black;
+  top: 50%;
+  left: 1.5em;
+  position: absolute;
+  transform: translateY(-50%);
+  transform-origin: center;
+  transition: background 0.3s linear, width 0.3s linear;
+}
+
+.fancy .text {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  padding-left: 2em;
+  display: block;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+.fancy .top-key {
+  height: 2px;
+  width: 1.5625rem;
+  top: -2px;
+  left: 0.625rem;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+  height: 2px;
+  width: 1.5625rem;
+  right: 1.875rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+  height: 2px;
+  width: 0.625rem;
+  right: 0.625rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+  color: white;
+  background: black;
+}
+ 
+.fancy:hover::before {
+  width: 0.9375rem;
+  background: white;
+}
+
+.fancy:hover .text {
+  color: white;
+  padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+  left: -2px;
+  width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+  .fancy:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
+}
+
+.contents {
+  width: 50vw;
+  height: 70vh;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  margin: 1rem auto;
+}
+
+.title {
+  width: 50vw;
+  border: 1px solid black;
+  border-left: 8px solid black;
+  color: black;
+  margin: 0rem auto;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  font-size: 1.5rem;
+}
+
+table{
+  border-collapse: collapse;
+  margin: 1rem auto;
+}
+
+table tr{
+  border-bottom: solid 2px white;
+}
+
+table tr:last-child{
+  border-bottom: none;
+}
+
+table th{
+  position: relative;
+  text-align: left;
+  width: 30%;
+  background-color: #52c2d0;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+table th:after{
+  display: block;
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top:calc(50% - 10px);
+  right:-10px;
+  border-left: 10px solid #52c2d0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+table td{
+  text-align: left;
+  width: 70%;
+  background-color: white;
+  padding: 10px 30px;
+}
+
+.trigger {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.update-btn {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  align-items: center;
+  background: green;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+  background: green;
+  margin-left:auto;
+  margin-top: 3rem;
+}
+
+.delete-btn {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: red;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+  background: #e62222;
+  margin-left:2rem;
+  margin-top: 3rem;
+}
+
+.create-btn {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  align-items: center;
+  background: blue;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+  background: rgb(50, 50, 240);
+  margin-left:2rem;
+  margin-top: 3rem;
+}
+
+.update-btn,
+.delete-btn,
+.create-btn,
+.update-btn span,
+.delete-btn span,
+.create-btn span {
+  transition: 200ms;
+}
+
+.update-btn .text,
+.delete-btn .text,
+.create-btn .text {
+  transform: translateX(35px);
+  color: white;
+  font-weight: bold;
+}
+
+.update-btn .icon {
+  position: absolute;
+  border-left: 1px solid green;
+  transform: translateX(110px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.update-btn:hover {
+  background: rgba(2, 124, 2, 0.63);
+}
+
+.delete-btn .icon {
+  position: absolute;
+  border-left: 1px solid #c41b1b;
+  transform: translateX(110px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-btn:hover {
+  background: #ff3636;
+}
+
+.create-btn .icon {
+  position: absolute;
+  border-left: 1px solid blue;
+  transform: translateX(110px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-btn:hover {
+  background: rgba(0, 0, 255, 0.726);
+}
+
+.update-btn svg,
+.delete-btn svg,
+.create-btn svg {
+  width: 15px;
+  fill: #eee;
+}
+
+.update-btn:hover .text,
+.delete-btn:hover .text,
+.create-btn:hover .text {
+  color: transparent;
+}
+
+.update-btn:hover .icon,
+.delete-btn:hover .icon,
+.create-btn:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+}
+
+.update-btn:focus,
+.delete-btn:focus,
+.create-btn:focus {
+  outline: none;
+}
+
+.update-btn:active .icon svg,
+.delete-btn:active .icon svg,
+.create-btn:active .icon svg {
+  transform: scale(0.8);
+}
+
+@media screen and (max-width:768px) {
+  .top-box {
+    margin-right: 0;
+  }
+
+  .top-box > a {
+    margin-top: 1rem;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  .contents {
+    font-size: 0.75rem;
+  }
+  .trigger {
+    flex-direction: column;
+  }
+  .delete-btn {
+    margin-left:0;
+    margin-top: 1rem;
+  }
+  th {
+    font-size: 0.75rem;
+  }
+  td {
+    font-size: 0.75rem;
+  }
+  .top-box {
+    margin-right: 1rem;
+  }
+}
